@@ -3,4 +3,4 @@ import {
   BookStoreServiceConsumer
 } from "./bookstore-service-context";
 
-export default { BookStoreServiceProvider, BookStoreServiceConsumer };
+export { BookStoreServiceProvider, BookStoreServiceConsumer };
