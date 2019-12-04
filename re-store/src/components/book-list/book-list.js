@@ -19,7 +19,7 @@ class BookList extends Component {
   render() {
     const { books } = this.props;
     return (
-      <ul>
+      <ul className="book-list">
         {books.map(item => {
           return (
             <li key={item.id}>
@@ -33,7 +33,8 @@ class BookList extends Component {
 }
 
 //Ключ - название prop в компоненте.
-//Значение - название соответствующего ключа в глобальном стейте
+//Значение - название соответствующего ключа в store
+//Для получения books из store
 const mapStateToProps = state => {
   return {
     books: state.books
@@ -41,6 +42,7 @@ const mapStateToProps = state => {
 };
 
 //Возвращает свойство компонента booksLoaded, которое диспатчит новый экшн
+//Для диспатча экшена booksLoaded
 const mapDispatchToProps = { booksLoaded };
 
 export default withBookstoreService(
